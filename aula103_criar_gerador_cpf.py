@@ -12,48 +12,51 @@ for cont in range(0, 9):
 cpf_9digitos = sequencia.copy()
 print(cpf_9digitos)
 
-soma_geral_a = 0
-fator_a = 10
+# Cálculo do 10º dígito do CPF:
 
-for digito_a in cpf_9digitos:
-    produto_a = int(digito_a) * fator_a
-    soma_geral_a += produto_a
-    fator_a -= 1
+soma_geral_digitos = 0
+fator_multiplicao_digito10 = 10
 
-multi_10_a = soma_geral_a * 10
-resto11_a = multi_10_a % 11
+for digito_10 in cpf_9digitos:
+    produto = int(digito_10) * fator_multiplicao_digito10
+    soma_geral_digitos += produto
+    fator_multiplicao_digito10 -= 1
 
-if resto11_a > 9:
+multiplicao_10 = soma_geral_digitos * 10
+resto11_digito10 = multiplicao_10 % 11
+
+if resto11_digito10 > 9:
     num_cpf_10 = 0
     cpf_9digitos.append(num_cpf_10)
     print(f'O 10º dígito do CPF fornecido é {num_cpf_10} (zero).')
 else:
-    num_cpf_10 = resto11_a
+    num_cpf_10 = resto11_digito10
     cpf_9digitos.append(num_cpf_10)
     print(f'O 10º dígito do CPF fornecido é {num_cpf_10}')
 
+#Cálculo do 11º dígito do CPF:
 
-soma_geral_b = 0
-fator_b = 11
+soma_geral_digito11 = 0
+fator_multiplicao_digito11 = 11
 
-for digito_b in cpf_9digitos:
-    produto_b = int(digito_b) * fator_b
-    soma_geral_b += produto_b
-    fator_b -= 1
+for digito_11 in cpf_9digitos:
+    produto_digito11 = int(digito_11) * fator_multiplicao_digito11
+    soma_geral_digito11 += produto_digito11
+    fator_multiplicao_digito11 -= 1
 
-multi_10_b = soma_geral_b * 10
-resto11_b = multi_10_b % 11
+multiplicacao10_digito11 = soma_geral_digito11 * 10
+resto11_digito11 = multiplicacao10_digito11 % 11
 
-if resto11_b > 9:
+if resto11_digito11 > 9:
     num_cpf_11 = 0
     cpf_9digitos.append(num_cpf_11)
     print(f'O 11º dígito do CPF fornecido é {num_cpf_11} (zero).')
 else:
-    num_cpf_11 = resto11_b
+    num_cpf_11 = resto11_digito11
     cpf_9digitos.append(num_cpf_11)
-    print(f'O 11º dígito do CPF fornecido é {num_cpf_11}')
+    print(f'O 11º dígito do CPF fornecido é {num_cpf_11}\n')
 
-print()
+#Apresentação do CPF gerado:
 
 cpf_completo = cpf_9digitos.copy()
 
