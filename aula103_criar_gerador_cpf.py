@@ -60,5 +60,4 @@ else:
 
 cpf_completo = cpf_9digitos.copy()
 
-for digito in cpf_completo:
-    print(f'{digito}', end='')
+print(*cpf_completo)
