@@ -1,7 +1,6 @@
 from random import randint
 
 cpf_9digitos = []
-cpf_completo = []
 sequencia = []
 cont = 0
 
@@ -58,6 +57,4 @@ else:
 
 #Apresentação do CPF gerado:
 
-cpf_completo = cpf_9digitos.copy()
-
-print(*cpf_completo)
+print(*cpf_9digitos)
