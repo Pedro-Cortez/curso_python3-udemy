@@ -10,3 +10,4 @@ s3 = s1 & s2
 s3 = s2 - s1
 s4 = s1 ^ s2
 print(s3)
+ 
